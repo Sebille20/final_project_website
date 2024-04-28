@@ -3,13 +3,23 @@ document.addEventListener('DOMContentLoaded', function () {
     fetch('https://alice-portfolio.onrender.com/personal-info')
         .then(response => response.json())
         .then(data => {
+            const info = data[0];
             document.getElementById('personal-info').innerHTML = `
-                <h2>Personal Information</h2>
-                <p>Name: ${data.name}</p>
-                <p>Birth Date: ${data.birthDate}</p>
-                <p>Gender: ${data.gender}</p>
-                <p>Contact No: ${data.contactNo}</p>
-                <p>Address: ${data.address}</p>
+                <img src=${info.personalImg}>
+                <div class="objective">
+                    <img class="objective-img" src=${info.objectiveIcon}>
+                    <div class="objective-text"> ${info.objective} </div>
+                </div>
+                <div class="phone">
+                    <img class="objective-img"
+                        src=${info.phoneIcon}>
+                    <div class="phone-text"> ${info.contactNo}</div>
+                </div>
+                <div class="email">
+                    <img class="objective-img"
+                        src=${info.emailIcon}>
+                    <div class="email-text"> </div>
+                </div>
             `;
         });
 
