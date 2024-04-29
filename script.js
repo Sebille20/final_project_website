@@ -14,28 +14,21 @@ document.addEventListener('DOMContentLoaded', function () {
             <img src=${info.personalImg} alt="Personal Image">
             <div class="name">${info.name}</div>
             <div class="objective">
-                <img class="icon" src=${info.objectiveIcon} alt="Objective Icon">
+                <img class="objective-img" src=${info.objectiveIcon} alt="Objective Icon">
                 <div class="objective-text">${info.objective}</div>
             </div>
             <div class="phone">
-                <img class="icon" src=${info.phoneIcon} alt="Phone Icon">
+                <img class="objective-img" src=${info.phoneIcon} alt="Phone Icon">
                 <div class="phone-text">${info.contactNo}</div>
             </div>
             <div class="email">
-                <img class="icon" src=${info.emailIcon} alt="Email Icon">
+                <img class="objective-img" src=${info.emailIcon} alt="Email Icon">
                 <div class="email-text">${info.email}</div>
             </div>
             <div class="address">
-                <img class="icon" src=${info.homeIcon} alt="Home Icon">
+                <img class="objective-img" src=${info.homeIcon} alt="Home Icon">
                 <div class="address-text">${info.address}</div>
             </div>
-        `;
-
-        // Fetch and display skills
-        const skillsList = data.skills.map(skill => `<li>${skill.description} - ${skill.expertiseLevel}</li>`).join('');
-        document.getElementById('skills').innerHTML = `
-            <h2>Skills</h2>
-            <ul>${skillsList}</ul>
         `;
 
         // Fetch and display work experience
@@ -51,12 +44,11 @@ document.addEventListener('DOMContentLoaded', function () {
             ${workExpList}
         `;
 
-        // Fetch and display education
         const educationList = data.education.map(edu => `
-            <div class="edu-box">
-                <div class="edu-title">${edu.school}</div>
-                <div class="edu-date">${edu.year}</div>
-                <div class="edu-address">${edu.address}</div>
+            <div class="job-box">
+                <div class="job-title">${edu.school}</div>
+                <div class="job-date">${edu.year}</div>
+                <div class="job-description">${edu.address}</div>
             </div>
         `).join('');
         document.getElementById('education').innerHTML = `
@@ -66,15 +58,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Fetch and display personal references
         const referencesList = data.personalReferences.map(ref => `
-            <div class="ref-box">
-                <div class="ref-title">${ref.name}</div>
-                <div class="ref-date">${ref.relationship}</div>
-                <div class="ref-contact">${ref.contactNumber}</div>
+            <div class="job-box">
+                <div class="job-title">${ref.name}</div>
+                <div class="job-date">${ref.relationship}</div>
+                <div class="job-contact">${ref.contactNumber}</div>
             </div>
         `).join('');
         document.getElementById('personal-references').innerHTML = `
             <h1>Personal References</h1>
             ${referencesList}
+        `;
+
+        //Fetch Skills
+        const skillsList = data.skills.map(skill => `<li>${skill.description} - ${skill.expertiseLevel}</li>`).join('');
+        document.getElementById('skills').innerHTML = `
+            <h2>Skills</h2>
+            <ul>${skillsList}</ul>
         `;
     });
 });
