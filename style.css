@@ -18,7 +18,7 @@ body {
 }
 
 /**Left side content CSS**/
-.top-left {
+#personal-info {
     position: relative;
     border-style: solid;
     border-width: 0px 0px 3px 0px;
