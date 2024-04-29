@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const info = data[0];
             document.getElementById('personal-info').innerHTML = `
                 <img src=${info.personalImg}>
+                <div class=name>${info.name}</div>
                 <div class="objective">
                     <img class="objective-img" src=${info.objectiveIcon}>
                     <div class="objective-text"> ${info.objective} </div>
@@ -18,7 +19,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="email">
                     <img class="objective-img"
                         src=${info.emailIcon}>
-                    <div class="email-text"> </div>
+                    <div class="email-text">${info.email}</div>
+                </div>
+                <div class="email">
+                    <img class="objective-img"
+                        src=${info.homeIcon}>
+                    <div class="email-text">${info.address}</div>
                 </div>
             `;
         });
