@@ -11,22 +11,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Fetch and display personal information
         document.getElementById('personal-info').innerHTML = `
-            <img src=${info.personalImg} alt="Personal Image">
+            <img class="personal-img" src=${info.personalImg} alt="Personal Image">
             <div class="name">${info.name}</div>
             <div class="objective">
                 <img class="objective-img" src=${info.objectiveIcon} alt="Objective Icon">
                 <div class="objective-text">${info.objective}</div>
             </div>
             <div class="phone">
-                <img class="objective-img" src=${info.phoneIcon} alt="Phone Icon">
+                <img class="phone-img" src=${info.phoneIcon} alt="Phone Icon">
                 <div class="phone-text">${info.contactNo}</div>
             </div>
             <div class="email">
-                <img class="objective-img" src=${info.emailIcon} alt="Email Icon">
+                <img class="email-img" src=${info.emailIcon} alt="Email Icon">
                 <div class="email-text">${info.email}</div>
             </div>
             <div class="address">
-                <img class="objective-img" src=${info.homeIcon} alt="Home Icon">
+                <img class="address-img" src=${info.homeIcon} alt="Home Icon">
                 <div class="address-text">${info.address}</div>
             </div>
         `;
