@@ -10,70 +10,98 @@ document.addEventListener('DOMContentLoaded', function () {
         const info = data.personalInfo;
 
         // Fetch and display personal information
-        document.getElementById('personal-info').innerHTML = `
-            <img class="personal-img" src=${info.personalImg} alt="Personal Image">
-            <div class="name">${info.name}</div>
-            <div class="objective">
-                <img class="objective-img" src=${info.objectiveIcon} alt="Objective Icon">
-                <div class="objective-text">${info.objective}</div>
-            </div>
-            <div class="phone">
-                <img class="phone-img" src=${info.phoneIcon} alt="Phone Icon">
-                <div class="phone-text">${info.contactNo}</div>
-            </div>
-            <div class="email">
-                <img class="email-img" src=${info.emailIcon} alt="Email Icon">
-                <div class="email-text">${info.email}</div>
-            </div>
-            <div class="address">
-                <img class="address-img" src=${info.homeIcon} alt="Home Icon">
-                <div class="address-text">${info.address}</div>
-            </div>
+        document.getElementById('icon-data').innerHTML = `
+         <ul>
+            <li><img src=${info.markerIcon} alt="" width=27px></li>
+            <li><img src=${info.phoneIcon} alt="" width=27px></li>
+            <li><img src=${info.phoneIcon} alt="" width=27px</li>
+        </ul>
+        <h3 class="grey">LANGUAGE</h3>
+        <h3 class="grey">SKILLS</h3>
+        `;
+
+        // Fetch and display personal information
+        document.getElementById('personal-data').innerHTML = `
+        <h2>${info.firstname}<br>${info.lastname}</h2>
+        <h3>PROFILE</h3>
+        <p style="text-align: justify;color:#838385">${info.objective}</p>
+        <h3>CONTACT</h3>
+        <h4>Address</h4>
+        <p>${info.address}</p>
+        <h4>Phone</h4>
+        <p>${info.contactNo}</p>
+        <h4>Email</h4>
+        <p>${info.email}</p>
+        `;
+
+        document.getElementById('picture-data').innerHTML = `
+        <img src=${info.personalImg} alt="" width=345px>
+        <div class="colorbox"></div>
+        <div class="colorbox2"></div>
+        <img class="colorbox3" src="https://i.postimg.cc/KjHJLvVw/arrow.png" alt="" width=124px>
         `;
 
         // Fetch and display work experience
-        const workExpList = data.workExperience.map(exp => `
-            <div class="job-box">
-                <div class="job-title">${exp.designation} @ ${exp.companyName}</div>
-                <div class="job-date">${exp.year}</div>
-                <div class="job-description">${exp.details}</div>
-            </div>
+        const languageList = data.language.map(lang => `
+        <div class="language">
+            <h4>${lang.languagename}</h4>
+        </div>
         `).join('');
-        document.getElementById('work-experience').innerHTML = `
-            <h1 class="work-title">Work Experience</h1>
-            ${workExpList}
+        document.getElementById('language-data').innerHTML = `
+            ${languageList}
         `;
 
         const educationList = data.education.map(edu => `
-            <div class="job-box">
-                <div class="job-title">${edu.school}</div>
-                <div class="job-date">${edu.year}</div>
-                <div class="job-description">${edu.address}</div>
+            <div class="year">
+                <h4>${edu.year}</h4>
+                <div class="info grey">${edu.school}, ${edu.address}
+                </div>
             </div>
         `).join('');
-        document.getElementById('education').innerHTML = `
-            <h1>Education</h1>
+        document.getElementById('education-data').innerHTML = `
+            <h3 class="center" style="padding:80px 0px 5px 65px;">EDUCATION</h3>
             ${educationList}
+        `;
+
+        // Fetch and display wskills
+        const skillList = data.skills.map(skill => `
+        <div class="language">
+            <h4>${skill.description}</h4>
+            <div class="rate">
+            </div>
+        </div>
+        `).join('');
+        document.getElementById('skills-data').innerHTML = `
+            ${skillList}
         `;
 
         // Fetch and display personal references
         const referencesList = data.personalReferences.map(ref => `
-            <div class="job-box">
-                <div class="job-title">${ref.name}</div>
-                <div class="job-date">${ref.relationship}</div>
-                <div class="job-contact">${ref.contactNumber}</div>
+            <div class="year">
+                <h4>${ref.name}</h4>
+                <div class="info grey">
+                   ${ref.relationship} | ${ref.contactNumber}
+                </div>
             </div>
         `).join('');
-        document.getElementById('personal-references').innerHTML = `
-            <h1>Personal References</h1>
+        document.getElementById('personal-ref-data').innerHTML = `
+            <h3 class="center" style="padding:80px 0px 5px 65px;">PERSONAL REFERENCES</h3>
             ${referencesList}
         `;
 
-        //Fetch Skills
-        const skillsList = data.skills.map(skill => `<li>${skill.description} - ${skill.expertiseLevel}</li>`).join('');
-        document.getElementById('skills').innerHTML = `
-            <h2>Skills</h2>
-            <ul>${skillsList}</ul>
+        // Fetch and display personal references
+        const achievementsList = data.achievements.map(ach => `
+         <div class="year">
+                <h4>${ach.year}</h4>
+                <div class="info grey">${ach.name}
+                </div>
+        </div>
+        `).join('');
+        document.getElementById('achievements-data').innerHTML = `
+            <h3 class="center" style="padding:80px 0px 5px 65px;">ACHIEVEMENTS</h3>
+            ${achievementsList}
         `;
+
+
     });
 });
