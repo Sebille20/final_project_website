@@ -94,6 +94,9 @@ document.addEventListener('DOMContentLoaded', function () {
          <div class="year">
                 <h4>${ach.year}</h4>
                 <div class="info grey">${ach.name}
+                <div class= "info grey"> ${ach.semester}
+                </div>
+            
                 </div>
         </div>
         `).join('');

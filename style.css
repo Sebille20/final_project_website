@@ -212,62 +212,7 @@ p {
     /*   margin-top: 90px; */
 }
 
-.pie {
-    width: 70px;
-    height: 70px;
-    background-color: #93a0a8;
-    overflow: hidden;
-    border-radius: 100%;
-    position: absolute;
-    left: 4px;
-}
 
-.cutpie1 {
-    width: 70px;
-    height: 70px;
-    background-color: rgba(69, 73, 173, 1);
-    position: absolute;
-    transform-origin: bottom right;
-    transform: rotate(0deg);
-    left: 35px;
-    top: -35px;
-}
-
-.cutpie2 {
-    width: 70px;
-    height: 70px;
-    background-color: rgba(69, 73, 173, 1);
-    /*   border:solid 1px; */
-    position: absolute;
-    transform-origin: bottom right;
-    transform: rotate(30deg);
-    left: 26px;
-    top: 1px;
-}
-
-.cutpie2s {
-    width: 70px;
-    height: 70px;
-    background-color: rgba(69, 73, 173, 1);
-    /*   border:solid 1px; */
-    position: absolute;
-    transform-origin: bottom right;
-    transform: rotate(150deg);
-    left: -35px;
-    top: -34px;
-}
-
-.cutpie3 {
-    width: 70px;
-    height: 70px;
-    background-color: rgba(69, 73, 173, 1);
-    /*   border:solid 1px; */
-    position: absolute;
-    transform-origin: bottom left;
-    transform: rotate(240deg);
-    left: 35px;
-    top: -35px;
-}
 
 .software h4 {
     padding-top: 10px;
@@ -287,4 +232,10 @@ p {
     vertical-align: middle;
     height: auto;
     margin-left: 0px;
+}
+
+.achievements{
+
+    position: relative;
+    bottom: 1px;
 }
