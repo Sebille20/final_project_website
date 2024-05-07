@@ -32,6 +32,9 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>${info.contactNo}</p>
         <h4>Email</h4>
         <p>${info.email}</p>
+        <h4>Gender</h4>
+        <p>${info.gender}</p>
+       
         `;
 
         document.getElementById('picture-data').innerHTML = `
