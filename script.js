@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const educationList = data.education.map(edu => `
             <div class="year">
                 <h4>${edu.year}</h4>
-                <div class="info grey">${edu.school}, ${edu.address}
+                <div class="info grey">${edu.school}<br> ${edu.address}
                 </div>
             </div>
         `).join('');
@@ -93,8 +93,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const achievementsList = data.achievements.map(ach => `
          <div class="year">
                 <h4>${ach.year}</h4>
-                <div class="info grey">${ach.name}
-                <div class= "info grey"> ${ach.semester}
+                <div class="info grey">${ach.name}<br>
+                <div class= "info grey"> ${ach.semester}</br>
                 </div>
             
                 </div>

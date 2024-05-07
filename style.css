@@ -68,6 +68,8 @@ p {
     height: 1070px;
     vertical-align: top;
     padding-top: 440px;
+    position: relative;
+    bottom: 77px;
 }
 
 .contact li {
@@ -149,7 +151,7 @@ p {
 
 .year .info {
     display: inline-block;
-    text-align: right;
+    text-align: center;
     width: 230px;
     font-size: 14px;
     vertical-align: middle;
@@ -238,4 +240,9 @@ p {
 
     position: relative;
     bottom: 1px;
+}
+.reference {
+
+    position: relative;
+    bottom:35px;
 }
