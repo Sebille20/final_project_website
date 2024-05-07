@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <li><img src=${info.markerIcon} alt="" width=27px></li>
             <li><img src=${info.phoneIcon} alt="" width=27px></li>
             <li><img src=${info.phoneIcon} alt="" width=27px</li>
+            li><img src=${info.genderIcon} alt="" width=27px</li>
         </ul>
         <h3 class="grey">LANGUAGE</h3>
         <h3 class="grey">SKILLS</h3>
@@ -32,6 +33,8 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>${info.contactNo}</p>
         <h4>Email</h4>
         <p>${info.email}</p>
+        <h4>Gender</h4>
+        <p>${info.gender}</p>
        
        
         `;
