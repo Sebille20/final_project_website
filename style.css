@@ -18,6 +18,7 @@ ul {
 
 body {
     background-color: #9593a8;
+    
 }
 
 h2,
@@ -28,7 +29,7 @@ h4,
 }
 
 .grey {
-    color: #838385;
+    color: #5c5c5c;
 }
 
 h3 {
@@ -79,10 +80,11 @@ p {
 
 .contact h3.grey {
     writing-mode: vertical-rl;
-    color: #9ca8a8;
-    padding-top: 20px;
+    padding-top: 75px;
     padding-bottom: 40px;
     padding-left: 5px;
+    position: relative;
+    top: 28px;
 }
 
 .content {
@@ -97,7 +99,7 @@ p {
     margin-right: 5px;
     border-left: solid 2px #a8adb0;
     box-sizing: border-box;
-    height: 1157px;
+    height: 1362px;
     vertical-align: top;
 }
 
@@ -120,6 +122,7 @@ p {
     position: relative;
     margin-top: 40px;
     padding-left: 15px;
+
 }
 
 .colorbox {
@@ -160,8 +163,8 @@ p {
 }
 
 .language {
-    margin: -12px 0px;
-    padding: 0px;
+    position: relative;
+    top: 58px;
 }
 
 .language h4 {
@@ -246,3 +249,4 @@ p {
     position: relative;
     bottom:35px;
 }
+
